@@ -41,7 +41,7 @@ namespace HITS_Flight_Simulator
             chart1.Series[0].Points.Clear();
             chart1.Series[0].Points.AddXY(x, y);
             timer1.Start();
-            double max_height = v0*v0 * Math.Sin(a) * Math.Sin(a) / (2 * g)+2;
+            double max_height = v0*v0 * Math.Sin(a) * Math.Sin(a) / (2 * g)+2+y0;
             double max_lenght = v0 * v0 * Math.Sin(2*a) /  g + 2;
             chart1.ChartAreas[0].AxisY.Maximum = max_height;
             chart1.ChartAreas[0].AxisX.Maximum = max_lenght;
