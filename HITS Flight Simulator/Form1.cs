@@ -26,7 +26,7 @@ namespace HITS_Flight_Simulator
         double t;
         double x;
         double y;
-        double time_sum;
+    
         private void button1_Click(object sender, EventArgs e)
         {
             time_timer.Text = $"Времени прошло {t}";
