@@ -29,12 +29,11 @@ namespace HITS_Flight_Simulator
         double time_sum;
         private void button1_Click(object sender, EventArgs e)
         {
-            time_sum = 0;
-            time_timer.Text = $"Времени прошло {time_sum}";
+            time_timer.Text = $"Времени прошло {t}";
             a = (double)edAngle.Value * Math.PI / 180;
             v0 = (double)edSpeed.Value;
             y0 = (double)edHeight.Value;
-            dt = (double)timer1.Interval / 1000;
+            dt = 0.01;
             t = 0;
             x = 0;
             y = y0;
@@ -49,8 +48,8 @@ namespace HITS_Flight_Simulator
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            time_sum += dt;
-            time_timer.Text = $"Времени прошло {time_sum} мс";
+
+            time_timer.Text = $"Времени прошло {t} с";
             t += dt;
             x = v0 * Math.Cos(a) * t;
             y = y0 + v0 * Math.Sin(a) * t - g * t * t / 2;

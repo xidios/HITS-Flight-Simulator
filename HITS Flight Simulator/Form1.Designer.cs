@@ -40,10 +40,10 @@ namespace HITS_Flight_Simulator
             this.edHeight = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.time_timer = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.time_timer = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.edAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edHeight)).BeginInit();
@@ -141,6 +141,25 @@ namespace HITS_Flight_Simulator
             this.panel1.Size = new System.Drawing.Size(800, 120);
             this.panel1.TabIndex = 7;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(365, 66);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 48);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Stop";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // time_timer
+            // 
+            this.time_timer.AutoSize = true;
+            this.time_timer.Location = new System.Drawing.Point(403, 29);
+            this.time_timer.Name = "time_timer";
+            this.time_timer.Size = new System.Drawing.Size(93, 13);
+            this.time_timer.TabIndex = 7;
+            this.time_timer.Text = "Времени прошло";
+            // 
             // chart1
             // 
             chartArea2.AxisX.Maximum = 25D;
@@ -164,25 +183,6 @@ namespace HITS_Flight_Simulator
             // 
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // time_timer
-            // 
-            this.time_timer.AutoSize = true;
-            this.time_timer.Location = new System.Drawing.Point(403, 29);
-            this.time_timer.Name = "time_timer";
-            this.time_timer.Size = new System.Drawing.Size(93, 13);
-            this.time_timer.TabIndex = 7;
-            this.time_timer.Text = "Времени прошло";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(365, 66);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 48);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Stop";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
